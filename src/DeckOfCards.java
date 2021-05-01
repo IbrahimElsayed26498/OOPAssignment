@@ -11,9 +11,10 @@ public class DeckOfCards {
         deckOfCards = new Card[NUMBER_OF_CARDS];
     }
     public void fillDeckOfCards(){
+        int i=0;
         for (int rank=Card.getMinRank(); rank<= Card.getMaxRank(); rank++){
             for (int suit=0; suit<4; suit++){
-                deckOfCards[rank * suit + rank -1 ] = new Card(suit, rank);
+                deckOfCards[i++] = new Card(suit, rank);
             }
         }
     }
@@ -27,7 +28,7 @@ public class DeckOfCards {
     public String toString() {
         String s = "";
         for (int i=0; i<NUMBER_OF_CARDS; i++){
-            s += deckOfCards[i].toString() + " ";
+            s += deckOfCards[i].toString() + "\n";
         }
         return s;
     }
