@@ -13,7 +13,7 @@ public class DeckOfCards {
     public void fillDeckOfCards(){
         for (int rank=Card.getMinRank(); rank<= Card.getMaxRank(); rank++){
             for (int suit=0; suit<4; suit++){
-                deckOfCards[rank * suit] = new Card(suit, rank);
+                deckOfCards[rank * suit + rank -1 ] = new Card(suit, rank);
             }
         }
     }

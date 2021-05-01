@@ -4,5 +4,6 @@ public class Main {
         cards.fillDeckOfCards();
         for (int i=0; i<10; i++)
             cards.displayCard(i);
+        cards.displayDeckOfCards();
     }
 }
